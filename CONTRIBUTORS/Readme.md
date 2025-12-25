@@ -39,16 +39,26 @@ cd CONTRIBUTORS
 
 ## 📝 Step 3: Add Your Contribution
 
+
 1. **Create a folder** named after your GitHub username.
 2. **Inside that folder**, create a file named `<your-github-username>.txt`.
 3. **Add your details** to the text file following the format in `template.txt`.
 
-**Example:**
+**Directory Structure Example:**
+
+```
+CONTRIBUTORS/
+│
+└── YOUR_GITHUB_USERNAME/          <-- Create this folder
+	└── YOUR_GITHUB_USERNAME.txt   <-- Create this file
+```
+
+**Example file content:**
 ```
 Name: John Doe
 GitHub Username: johndoe123
 College: University of Technology
-Fun Fact: I once wrote code that compiled on the first try!
+Fun Fact/Story: I once wrote code that compiled on the first try!
 ```
 
 ---
