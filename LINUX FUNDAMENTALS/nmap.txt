@@ -1,0 +1,47 @@
+nmap - Network Mapper
+
+Description:
+nmap is a powerful network scanning and security auditing tool. It's essential for CTF challenges and penetration testing to discover hosts, open ports, services, and vulnerabilities on a network.
+
+Basic Syntax:
+nmap [options] <target>
+
+Flags:
+
+-sS (TCP SYN Scan)
+    Performs a stealthy "half-open" scan. Sends SYN packets and analyzes responses without completing the TCP handshake. Requires root privileges.
+    Example: nmap -sS 192.168.1.1
+
+-sV (Service Version Detection)
+    Probes open ports to determine service/version info running on them. Useful for identifying vulnerable software versions.
+    Example: nmap -sV 192.168.1.1
+
+-O (OS Detection)
+    Enables operating system detection using TCP/IP stack fingerprinting.
+    Example: nmap -O 192.168.1.1
+
+-p (Port Specification)
+    Specifies which ports to scan. Can use ranges, lists, or scan all 65535 ports with -p-.
+    Example: nmap -p 22,80,443 192.168.1.1
+    Example: nmap -p 1-1000 192.168.1.1
+    Example: nmap -p- 192.168.1.1
+
+-A (Aggressive Scan)
+    Enables OS detection, version detection, script scanning, and traceroute all at once.
+    Example: nmap -A 192.168.1.1
+
+-sU (UDP Scan)
+    Scans UDP ports. Slower than TCP but essential for finding services like DNS, SNMP, DHCP.
+    Example: nmap -sU 192.168.1.1
+
+-sn (Ping Scan)
+    Host discovery only, no port scan. Useful for finding live hosts on a network.
+    Example: nmap -sn 192.168.1.0/24
+
+-oN / -oX / -oG (Output Formats)
+    Saves results to file in normal (-oN), XML (-oX), or grepable (-oG) format.
+    Example: nmap -oN scan_results.txt 192.168.1.1
+
+--script (NSE Scripts)
+    Runs Nmap Scripting Engine scripts for vulnerability detection and exploitation.
+    Example: nmap --script vuln 192.168.1.1
