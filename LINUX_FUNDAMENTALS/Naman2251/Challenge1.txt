@@ -1,0 +1,19 @@
+The Flag: geek{grep_is_good_to_find_things_cEDf1591}
+The Command: grep -oE 'geek\{[^}]+\}' file
+Proof: https://drive.google.com/file/d/1_lmY-pvPfBlOx-XvLBf0QwMv1enQWgkY/view?usp=sharing
+
+Explaination:
+So, we knew that the flag is somewhere in the file, and it is of format `geek{...}`
+So, I decided to use grep.
+
+The flag:
+`-o` means only matching, like only show the content that matches.
+`-E` is used to specify the regular expresssion
+
+So, the command looks like: grep -oE "regex" filename
+
+Regex is: 'geek\{[^}]+\}'
+
+it means, it starts with `geek`, then and escape sequences `\{`.
+Then `[^}]` means accept everything in between, except `}`, and `+` means any number of times, for multiple characters.
+then it ends with `\}`.
