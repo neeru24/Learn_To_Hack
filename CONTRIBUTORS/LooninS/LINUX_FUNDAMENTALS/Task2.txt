@@ -1,0 +1,37 @@
+mkdir testdir
+# create a directory named testdir in the current directory
+
+cd testdir
+# change directory to testdir
+
+touch sourish.txt
+# create a file named sourish.txt in the testdir directory
+
+mv sourish.txt IIT2025099.txt
+# rename the file sourish.txt to IIT2025099.txt
+
+cd ..
+# change directory to the parent directory
+
+rm -r testdir
+# remove the testdir directory
+
+using Arch,btw
+
+sudo adduser newuser
+# add a new user named newuser
+
+groups newuser
+# list the groups that the newuser user belongs to
+
+sudo usermod -aG wheel newuser
+# add the newuser user to the wheel group
+
+groups newuser
+# list the groups that the newuser user belongs to and check if the wheel group is there
+
+sudo passwd newuser
+# change the password of the newuser user
+
+
+Screenshot: https://drive.google.com/file/d/1RhJDRrR7qRy0sg_42W6lizBI0UKSjGv3/view?usp=sharing
