@@ -1,0 +1,6 @@
+geek{grep_is_good_to_find_things_cEDf1591}
+
+
+grep -o "geek{.*}" file
+
+https://drive.google.com/file/d/1EB-VAWQWq2QtuwPD1DyzxA9eyNVTxbbY/view?usp=sharing
