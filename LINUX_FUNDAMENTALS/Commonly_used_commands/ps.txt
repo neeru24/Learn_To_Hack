@@ -1,0 +1,34 @@
+Command: ps
+
+Description:
+The ps command displays information about active processes running on the system.
+It is useful for identifying suspicious or privileged processes.
+
+Usage:
+ps [OPTIONS]
+
+Common Flags:
+
+- -e
+  Displays all running processes.
+
+- -f
+  Shows full-format listing including command paths.
+
+- -u <user>
+  Displays processes owned by a specific user.
+
+- aux
+  Displays detailed information about all processes (BSD format).
+
+- --forest
+  Displays processes in a tree structure.
+
+CTF Use Cases:
+- Identify root-owned processes
+- Detect misconfigured services
+- Find exploitable running programs
+
+Example:
+ps aux
+ps -ef
