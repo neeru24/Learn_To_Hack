@@ -1,0 +1,34 @@
+Command: readelf
+
+Description:
+The readelf command displays information about ELF (Executable and Linkable Format) files.
+It is widely used in reverse engineering and binary exploitation.
+
+Usage:
+readelf [OPTIONS] FILE
+
+Common Flags:
+
+- -h
+  Displays ELF file header.
+
+- -S
+  Displays section headers.
+
+- -l
+  Displays program headers.
+
+- -s
+  Displays symbol table.
+
+- -a
+  Displays all available information.
+
+CTF Use Cases:
+- Analyze ELF binaries
+- Identify exploitable sections
+- Inspect symbols and entry points
+
+Example:
+readelf -h binary
+readelf -a binary
