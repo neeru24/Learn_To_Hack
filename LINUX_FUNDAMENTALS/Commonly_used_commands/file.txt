@@ -1,0 +1,42 @@
+Command: file
+
+Description:
+The `file` command is used to determine the type of a file.
+Unlike file extensions, it inspects the file’s content to identify
+whether it is a binary, text, executable, image, archive, or script.
+
+This command is extremely useful in CTFs to identify unknown files,
+hidden binaries, or misleading file extensions.
+
+Usage:
+file [options] <filename>
+
+Common Flags:
+
+- -b
+  Prints brief output without the filename.
+  Useful when scripting or chaining commands.
+
+- -i
+  Displays the MIME type of the file.
+  Helpful when dealing with web uploads or content-type analysis.
+
+- -z
+  Attempts to look inside compressed files.
+  Useful when dealing with .gz or compressed payloads.
+
+- -L
+  Follows symbolic links and shows the target file type instead of the link.
+
+- -s
+  Reads block or character special files.
+  Useful for advanced system analysis.
+
+CTF Use Cases:
+- Identify disguised files (e.g., image.png actually being an executable)
+- Detect compiled binaries for reverse engineering
+- Verify extracted files during forensic analysis
+
+Example:
+file suspicious_file
+file -i upload.bin
